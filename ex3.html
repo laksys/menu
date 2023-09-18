@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="ex3.css" />
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <title>Guru</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">Guru Darshan</div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="src/home.html">Home</a></li>
+        <li><a href="src/ourguru.html">Our Guru</a></li>
+
+        <li><a href="src/gurudarshan.html">Guru Darshan</a></li>
+        <li class="services">   
+          <a href="#">Resources</a>
+
+          <!-- DROPDOWN MENU -->
+          <ul class="dropdown">
+            <li><a href="src/resources_devotion.html">Devotion</a></li>
+            <li><a href="src/resources_vedic_astrology.html">Vedic Astrology</a></li>
+            <li><a href="src/resources_srividya_meditation.html">Sri Vidya Meditation</a></li>
+            <li><a href="src/resources_universal_human_values.html">Universal Human Values</a></li>
+            <li><a href="src/resources_vedanta.html">Vedanta</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href="src/programs.html">Programs</a></li>
+        <li><a href="src/gallery_media.html">Gallary - Media</a></li>
+        <li><a href="src/contact.html">Contact</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  
+  <section id="one">
+  
+  </section>
+
+  
+</body>
+</html>
+
+<script>
+   $(function(){        
+       $("#one").load("src/home.html");
+
+       $("a").click(function(evt){
+            evt.preventDefault()            
+            $("#one").load(evt.target.href)
+       })
+   })
+</script>
